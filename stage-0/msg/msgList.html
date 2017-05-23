@@ -1,0 +1,32 @@
+<style>
+	li{
+		background-color: #ccc;
+		border:1px solid #000;
+		padding:10px;
+		margin:10px;
+	}
+	li p{
+		display:inline-block;
+	}
+</style>
+
+<ul>	
+	<li>
+		<p>id是</p>
+		<p>名字</p>
+		<p>密码</p>
+		<p>内容</p>
+		<p>删除</p>
+		<p>增加</p>
+	</li>
+	<?php foreach($data as $v) {?>
+		<li>
+			<p><?php echo $v['id']?></p>
+			<p><?php echo $v['name']?></p>
+			<p><?php echo $v['password']?></p>
+			<p><?php echo $v['content']?></p>
+			<p><a href="msgdet.php?id=<?php echo $v['id'];?>">删除</a></p>
+			<p><a href="msg-bianji.php?id=<?php echo $v['id'];?>">编辑</a></p>
+		</li>
+	<?php }?>
+</ul>
